@@ -16,23 +16,18 @@ class UsersController < ApplicationController
       puts "Contact found: name => #{contact[:name]}, email => #{contact[:email]}"
     end
   end
-  
+
   def failure
   end
 
   #for facebook  
   def login
-    # @token = request.env['omniauth.auth']['credentials']['token']
-    # @user = User.koala(request.env['omniauth.auth']['credentials'])
-    # @graph = Koala::Facebook::API.new(@token)
-    # @friends = @graph.get_connections("me", "friends")
     auth = request.env["omniauth.auth"]
     session['fb_auth'] = auth
     session['fb_access_token'] = auth['credentials']['token']
     if session['fb_access_token'].present?
       graph = Koala::Facebook::GraphAPI.new(session['fb_access_token']) # Note that i'm using session here
-      @profile_image = graph.get_picture("me")
-      @fbprofile = graph.get_object("me")
+      @user = User.koala(request.env['omniauth.auth']['credentials'])
       @friends = graph.get_connections("me", "friends")
     end
   end
