@@ -1,1 +1,8 @@
-<%= link_to "Facebook Login", '/auth/facebook' %>
+<%#= link_to "Facebook Login", '/auth/facebook' %>
+<% if !@contacts.nil?%>
+  <% @contacts.each do |c|%>
+    <ul>
+      <li><%= c[:name]%> : <%= c[:email]%></li>
+    </ul>
+  <%end%>
+<%end%>
