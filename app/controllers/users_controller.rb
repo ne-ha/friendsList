@@ -2,8 +2,7 @@ class UsersController < ApplicationController
   require 'koala'
 
   def index
-    binding.pry
-    @contacts = request.env[‘omnicontacts.contacts’]
+    @contacts = request.env['omnicontacts.contacts']
     respond_to do |format|
       format.html
     end
@@ -16,6 +15,10 @@ class UsersController < ApplicationController
     @contacts.each do |contact|
       puts "Contact found: name => #{contact[:name]}, email => #{contact[:email]}"
     end
+  end
+  
+  def failure
+  end
 
   #for facebook  
   def login
@@ -32,6 +35,5 @@ class UsersController < ApplicationController
       @fbprofile = graph.get_object("me")
       @friends = graph.get_connections("me", "friends")
     end
-  end
   end
 end
