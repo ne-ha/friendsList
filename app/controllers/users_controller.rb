@@ -2,8 +2,22 @@ class UsersController < ApplicationController
   require 'koala'
 
   def index
+    binding.pry
+    @contacts = request.env[‘omnicontacts.contacts’]
+    respond_to do |format|
+      format.html
+    end
   end
 
+  def callback
+    @contacts = request.env['omnicontacts.contacts']
+    @user = request.env['omnicontacts.user']
+    puts "List of contacts of #{@user[:name]} obtained from #{params[:importer]}:"
+    @contacts.each do |contact|
+      puts "Contact found: name => #{contact[:name]}, email => #{contact[:email]}"
+    end
+
+  #for facebook  
   def login
     # @token = request.env['omniauth.auth']['credentials']['token']
     # @user = User.koala(request.env['omniauth.auth']['credentials'])
@@ -18,5 +32,6 @@ class UsersController < ApplicationController
       @fbprofile = graph.get_object("me")
       @friends = graph.get_connections("me", "friends")
     end
+  end
   end
 end
