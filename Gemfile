@@ -28,6 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'koala'
 gem "omniauth"
 gem 'omniauth-facebook'
+gem "omniauth-google-oauth2"
 # Use Unicorn as the app server
 # gem 'unicorn'
 
