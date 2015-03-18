@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   require 'koala'
-  
+
   def index
   end
 
@@ -12,7 +12,6 @@ class UsersController < ApplicationController
     auth = request.env["omniauth.auth"]
     session['fb_auth'] = auth
     session['fb_access_token'] = auth['credentials']['token']
-    binding.pry
     if session['fb_access_token'].present?
       graph = Koala::Facebook::GraphAPI.new(session['fb_access_token']) # Note that i'm using session here
       @profile_image = graph.get_picture("me")
