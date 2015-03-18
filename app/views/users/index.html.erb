@@ -1,5 +1,5 @@
-<%#= link_to "Facebook Login", '/auth/facebook' %>
-<a href="/contacts/gmail">Gmail</a>
+<%= link_to "Facebook Login", '/auth/facebook' %><br />
+<%= link_to "Google Login", '/contacts/gmail'%>
 <% if !@contacts.nil?%>
   <% @contacts.each do |c|%>
     <ul>
