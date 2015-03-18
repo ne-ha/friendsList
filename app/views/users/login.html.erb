@@ -1,5 +1,5 @@
 <%= image_tag @user['picture']['data']['url'].to_s %>
-<%= @user['name'] %>
+<%= @user['name'] %><br />
 <% if @friends.present?%>
   <% @friends.each do |friend| %>
     <ul>
