@@ -1,6 +1,7 @@
 require "omnicontacts"
 
 Rails.application.middleware.use OmniContacts::Builder do
-  importer :gmail, "775333370063-7v8nubvujqsirviug5fsr0kr82mpu3th.apps.googleusercontent.com", "
-a0Vvk9C0OFCi92hOmZmhOLmW", {:redirect_path => "/contacts/gmail/callback"}
+  importer :gmail, 
+  "775333370063-lc2d7dpgmoohfv95anhtm5iaubhlfkra.apps.googleusercontent.com", 
+  "ZWR1BRVG_Xs3AW-IGGbJase7"
 end
