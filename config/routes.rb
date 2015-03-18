@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   
   
-  # get 'auth/facebook', as: "auth_provider"
-  # get 'auth/facebook/callback', to: 'users#login'
+  get 'auth/facebook', as: "auth_provider"
+  get 'auth/facebook/callback', to: 'users#login'
  
   get "/contacts/:provider/callback" => "users#index"
   get "/contacts/failure" => "users#failure"
