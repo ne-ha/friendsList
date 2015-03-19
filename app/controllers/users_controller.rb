@@ -2,8 +2,7 @@ class UsersController < ApplicationController
   require 'koala'
 
   def index
-    binding.pry
-    @contacts = request.env['omnicontacts.contacts']).page(params[:page]).per(10)
+    @contacts = request.env['omnicontacts.contacts']
     respond_to do |format|
       format.html
     end
