@@ -1,0 +1,12 @@
+<%= image_tag @user['picture']['data']['url'].to_s %>
+<%= @user['name'] %><br />
+<% if @friends.present?%>
+  <% @friends.each do |friend| %>
+    <ul>
+      <li><%= friend.name %></li>
+    </ul>
+  <%end%>
+<%else%>
+  You do not have any friends.
+<%end%>
+
