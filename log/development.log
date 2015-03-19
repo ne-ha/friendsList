@@ -4542,3 +4542,23 @@ Started GET "/contacts/gmail" for 127.0.0.1 at 2015-03-19 13:22:34 +0545
 
 
 Started GET "/contacts/gmail" for 127.0.0.1 at 2015-03-19 13:22:34 +0545
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-19 14:38:06 +0545
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 87ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/gmail" for 127.0.0.1 at 2015-03-19 14:38:07 +0545
+
+
+Started GET "/contacts/gmail" for 127.0.0.1 at 2015-03-19 14:38:07 +0545
+
+
+Started GET "/contacts/gmail/callback?code=4/JlEBzC80hvDKlBL-HnKhGJHPgGrOQ4dLcfMkWdTwsys.4oAHDZ-vMUMacp7tdiljKKZrm3limAI" for 127.0.0.1 at 2015-03-19 14:38:19 +0545
+Processing by UsersController#index as HTML
+  Parameters: {"code"=>"4/JlEBzC80hvDKlBL-HnKhGJHPgGrOQ4dLcfMkWdTwsys.4oAHDZ-vMUMacp7tdiljKKZrm3limAI", "provider"=>"gmail"}
+  Rendered users/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.0ms)
