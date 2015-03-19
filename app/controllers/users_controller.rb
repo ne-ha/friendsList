@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   require 'koala'
 
   def index
-    @contacts = request.env['omnicontacts.contacts']
+    @contacts = Kaminari.paginate_array(request.env['omnicontacts.contacts']).page(params[:page]).per(10)
     respond_to do |format|
       format.html
     end

@@ -80,6 +80,9 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.2)
     jwt (1.4.1)
+    kaminari (0.16.3)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     koala (1.11.1)
       addressable
       faraday
@@ -208,6 +211,7 @@ DEPENDENCIES
   gmail-contacts
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   koala
   omniauth
   omniauth-facebook
