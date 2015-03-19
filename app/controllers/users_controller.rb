@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     session['fb_auth'] = auth
     session['fb_access_token'] = auth['credentials']['token']
     if session['fb_access_token'].present?
-      graph = Koala::Facebook::GraphAPI.new(session['fb_access_token']) # Note that i'm using session here
+      graph = Koala::Facebook::GraphAPI.new(session['fb_access_token']) 
       @user = User.koala(request.env['omniauth.auth']['credentials'])
       @friends = graph.get_connections("me", "friends")
     end
