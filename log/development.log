@@ -4652,3 +4652,29 @@ Started GET "/contacts/gmail" for 127.0.0.1 at 2015-03-19 15:14:19 +0545
 
 
 Started GET "/contacts/gmail" for 127.0.0.1 at 2015-03-19 15:14:19 +0545
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-19 15:20:18 +0545
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 89ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/gmail" for 127.0.0.1 at 2015-03-19 15:20:20 +0545
+
+
+Started GET "/contacts/gmail" for 127.0.0.1 at 2015-03-19 15:20:20 +0545
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-19 15:21:44 +0545
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 89ms (Views: 80.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/gmail" for 127.0.0.1 at 2015-03-19 15:21:46 +0545
+
+
+Started GET "/contacts/gmail" for 127.0.0.1 at 2015-03-19 15:21:46 +0545

@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def callback
-    @contacts = request.env['omnicontacts.contacts']
+    @contacts = Kaminari.paginate_array(request.env['omnicontacts.contacts']).page(params[:page]).per(3)
     @user = request.env['omnicontacts.user']
     puts "List of contacts of #{@user[:name]} obtained from #{params[:importer]}:"
     @contacts.each do |contact|
