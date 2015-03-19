@@ -1,9 +1,18 @@
-<%= link_to "Facebook Login", '/auth/facebook' %><br />
-<%= link_to "Google Login", '/contacts/gmail'%>
-<% if !@contacts.nil?%>
-  <% @contacts.each do |c|%>
-    <ul>
-      <li><%= c[:name]%> : <%= c[:email]%></li>
-    </ul>
-  <%end%>
+<%#= link_to "Facebook Login", '/auth/facebook' ,class:"btn btn-primary"%>
+<%= link_to "Google Login", '/contacts/gmail',class:"btn btn-primary"%>
+
+<% if @contacts%>
+  <table class="table table-bordered">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+    <% @contacts.each do |c|%>
+      <tr>
+        <td><%= c[:name]%></td>
+        <td><%= c[:email]%></td>
+      </tr>
+    <%end%>
+  </table>
 <%end%>
+
