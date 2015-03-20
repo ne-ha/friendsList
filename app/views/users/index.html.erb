@@ -11,11 +11,10 @@
     </tr>
     <% @contacts.each do |c|%>
       <tr>
-        <td><%= c[:name]%></td>
-        <td><%= c[:email]%></td>
+        <td><%= c[0]%></td>
+        <td><%= c[1]%></td>
       </tr>
     <%end%>
   </table>
-  <%#= paginate @contacts%>
 <%end%>
 
