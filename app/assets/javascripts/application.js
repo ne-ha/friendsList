@@ -15,3 +15,7 @@
 //= require turbolinks
 //= require infinitescrolling
 //= require_tree .
+
+$('.contains').infinitescroll({
+  
+});
