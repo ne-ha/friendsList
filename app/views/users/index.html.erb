@@ -5,16 +5,21 @@
 <%else%>
   <%= link_to "Google Login", '/contacts/gmail',class:"btn btn-primary", disabled: "disabled"%>
   <table class="table table-bordered">
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-    </tr>
-    <% @contacts.each do |c|%>
+    <thead>
       <tr>
-        <td><%= c[0]%></td>
-        <td><%= c[1]%></td>
+        <th>Name</th>
+        <th>Email</th>
       </tr>
-    <%end%>
+    </thead>
+    <tbody id="contains">
+      <% @contacts.each do |c|%>
+        <tr>
+          <td><%= c[0]%></td>
+          <td><%= c[1]%></td>
+        </tr>
+      <%end%>
+    </tbody>
   </table>
+  <%= paginate @contacts %>
 <%end%>
 
