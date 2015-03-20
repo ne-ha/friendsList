@@ -2,11 +2,23 @@ class UsersController < ApplicationController
   require 'koala'
 
   def index
+    # contacts_info
+    # @contacts = Kaminari.paginate_array(@name_email).page(params[:page]).per(3) if @name_email.present?
     @contacts = request.env['omnicontacts.contacts']
     respond_to do |format|
       format.html
     end
   end
+
+  # def contacts_info
+  #   @all_contacts = request.env['omnicontacts.contacts']
+  #   if @all_contacts.nil?
+  #     return nil
+  #   else
+  #     @name_email = @all_contacts.map{|c| [c[:name], c[:email]] }
+  #     return @name_email
+  #   end
+  # end
 
   def callback
     @contacts = request.env['omnicontacts.contacts']
