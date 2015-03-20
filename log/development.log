@@ -6645,3 +6645,23 @@ Processing by UsersController#index as HTML
   Parameters: {"code"=>"4/SjmujIJ_aed_-eGUXNBVqjMsZIN9Xy3ZDCc9w_R77h8.YquFl9RSX0sScp7tdiljKKZr9I9qmAI", "provider"=>"gmail"}
   Rendered users/index.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 38ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-20 09:36:32 +0545
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 88ms (Views: 79.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/gmail" for 127.0.0.1 at 2015-03-20 09:36:34 +0545
+
+
+Started GET "/contacts/gmail" for 127.0.0.1 at 2015-03-20 09:36:34 +0545
+
+
+Started GET "/contacts/gmail/callback?code=4/vi2h3saZW7SijqUMRi_pfg4yx7RnSaQO_yueM9fpc08.QqoiWncs7ygXcp7tdiljKKaT551qmAI" for 127.0.0.1 at 2015-03-20 09:36:37 +0545
+Processing by UsersController#index as HTML
+  Parameters: {"code"=>"4/vi2h3saZW7SijqUMRi_pfg4yx7RnSaQO_yueM9fpc08.QqoiWncs7ygXcp7tdiljKKaT551qmAI", "provider"=>"gmail"}
+  Rendered users/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.0ms)
