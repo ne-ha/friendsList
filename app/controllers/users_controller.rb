@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def index
     contacts_info
-    @contacts = @name_email
+    @contacts = Kaminari.paginate_array(session['name_email']).page(params[:page]).per(3)
     respond_to do |format|
       format.html
     end
@@ -14,8 +14,8 @@ class UsersController < ApplicationController
     if @all_contacts.nil?
       return nil
     else
-      @name_email = @all_contacts.map{|c| [c[:name], c[:email]] }
-      return @name_email
+      session['name_email'] = @all_contacts.map{|c| [c[:name], c[:email]] }
+      return session['name_email']
     end
   end
 
