@@ -8,8 +8,8 @@
     </tr>
     <% @contacts.each do |c|%>
       <tr>
-        <td><%= c[0]%></td>
-        <td><%= c[1]%></td>
+        <td><%= c[:name]%></td>
+        <td><%= c[:email]%></td>
       </tr>
     <%end%>
   </table>
