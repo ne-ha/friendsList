@@ -3,6 +3,7 @@
   <%= link_to "Google Login", '/contacts/gmail',class:"btn btn-primary"%><br />
   <p>There are no contacts.</p>
 <%else%>
+  <%= link_to "Logout", contacts_logout_path,class:"btn btn-primary"%>
   <%= link_to "Google Login", '/contacts/gmail',class:"btn btn-primary", disabled: "disabled"%>
   <table class="table table-bordered">
     <thead>
@@ -20,6 +21,8 @@
       <%end%>
     </tbody>
   </table>
-  <%= paginate @contacts %>
+  <div id="selector">
+    <%= paginate @contacts %>
+  </div>
 <%end%>
 
