@@ -2,6 +2,6 @@ require "omnicontacts"
 
 Rails.application.middleware.use OmniContacts::Builder do
   importer :gmail, 
-  "775333370063-oq2fmnt778krjk8dc0dmrksdq2465th4.apps.googleusercontent.com", 
-  "JExj_3ZvJikWF73MaXN3ZYqM"
+  "775333370063-9569nc7vg2ap5hqhvit40l8u95oip1ok.apps.googleusercontent.com", 
+  "1wwbpvxtByBeWXQFzN_ZI7mo"
 end
