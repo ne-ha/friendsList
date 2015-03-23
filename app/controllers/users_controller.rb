@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   end
 
   def contacts_info
-    @contacts = request.env['omnicontacts.contacts']
+    session['omnicontacts'] = request.env['omnicontacts.contacts']
     if @contacts.nil?
       session['name_email'] = nil
     else
