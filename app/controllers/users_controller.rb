@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     if @contacts.nil?
       session['name_email'] = nil
     else
+      session['name_email'] = nil
       session['name_email'] = @contacts.map{|c| [c[:name], c[:email]] }
     end
     redirect_to :action=>'index'
